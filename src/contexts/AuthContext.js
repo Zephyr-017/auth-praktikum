@@ -41,7 +41,7 @@ export const useAuth = () => useContext(AuthContext);
         // Saat kembali aktif, cek berapa lama app di background
         if (backgroundTime.current) {
           const elapsed = Date.now() - backgroundTime.current;
-          if (elapsed >= 3 * 1000) { // 3 detik (untuk testing)
+          if (elapsed >= 5 * 60 * 1000) { // 5 menit
             if (auth.currentUser) {
               logout();
             }
